@@ -1,238 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eliezer Trombeta</title>
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #0b0b0b;
-      color: #fff;
-      min-height: 100vh;
-    }
-
-    .container {
-      width: min(900px, 92%);
-      margin: auto;
-    }
-
-    header {
-      padding: 30px 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #222;
-    }
-
-    .logo {
-      font-size: 20px;
-      font-weight: bold;
-      letter-spacing: 3px;
-    }
-
-    nav a {
-      color: #aaa;
-      text-decoration: none;
-      margin-left: 25px;
-      font-size: 14px;
-    }
-
-    nav a:hover {
-      color: white;
-    }
-
-    .hero {
-      min-height: 600px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      flex-direction: column;
-      padding: 80px 20px;
-    }
-
-    .profile {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      background: #222;
-      margin-bottom: 30px;
-      border: 2px solid #444;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #777;
-      font-size: 13px;
-    }
-
-    h1 {
-      font-family: Georgia, serif;
-      font-size: clamp(45px, 8vw, 85px);
-      font-weight: normal;
-      letter-spacing: 3px;
-      margin-bottom: 15px;
-    }
-
-    .subtitle {
-      color: #999;
-      font-size: 17px;
-      max-width: 500px;
-      line-height: 1.6;
-      margin-bottom: 45px;
-    }
-
-    .links {
-      width: min(500px, 100%);
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .link {
-      display: block;
-      padding: 18px;
-      border: 1px solid #333;
-      border-radius: 8px;
-      color: white;
-      text-decoration: none;
-      background: #111;
-      transition: 0.25s;
-    }
-
-    .link:hover {
-      background: #1d1d1d;
-      border-color: #666;
-      transform: translateY(-2px);
-    }
-
-    .section {
-      padding: 90px 0;
-      border-top: 1px solid #222;
-    }
-
-    .section h2 {
-      font-family: Georgia, serif;
-      font-size: 42px;
-      font-weight: normal;
-      margin-bottom: 20px;
-    }
-
-    .section p {
-      color: #999;
-      line-height: 1.8;
-      max-width: 650px;
-    }
-
-    footer {
-      border-top: 1px solid #222;
-      padding: 40px 0;
-      text-align: center;
-      color: #666;
-      font-size: 13px;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        justify-content: center;
-      }
-
-      nav {
-        display: none;
-      }
-
-      .hero {
-        min-height: 650px;
-      }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eliezer Trombeta — Estilo & Escolhas</title>
+<meta name="description" content="O estilo, as peças e os looks de Eliezer Trombeta.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap');
+:root{--bg:#090909;--ink:#eee8df;--muted:#aaa39a;--line:#292622;--accent:#c7b8a3}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif;font-weight:300}
+a{color:inherit;text-decoration:none}.wrap{max-width:1400px;margin:auto;padding:0 42px}
+header{height:76px;border-bottom:1px solid var(--line);display:flex;align-items:center;position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(9,9,9,.78);backdrop-filter:blur(14px)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:28px}.brand{font-family:"Cormorant Garamond",serif;font-size:28px;letter-spacing:.08em;white-space:nowrap}.tag{font-size:9px;letter-spacing:.24em;color:var(--muted);margin-top:2px}.links{display:flex;gap:24px;font-size:10px;letter-spacing:.16em;text-transform:uppercase}.links a{opacity:.8}.links a:hover{opacity:1;color:var(--accent)}
+.hero{min-height:760px;height:100vh;position:relative;display:flex;align-items:center;overflow:hidden}.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%;filter:saturate(.72) contrast(1.08)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,5,5,.92) 0%,rgba(5,5,5,.62) 38%,rgba(5,5,5,.12) 72%,rgba(5,5,5,.42) 100%),linear-gradient(0deg,rgba(5,5,5,.55),transparent 35%,rgba(5,5,5,.2))}
+.hero-copy{position:relative;z-index:2;max-width:680px;padding-top:70px}.eyebrow{font-size:10px;letter-spacing:.34em;color:var(--accent);text-transform:uppercase}.hero h1{font:500 clamp(58px,8vw,112px)/.83 "Cormorant Garamond",serif;letter-spacing:-.025em;margin:25px 0}.hero p{font-size:15px;line-height:1.8;color:#d0cbc4;max-width:500px}.btn{display:inline-flex;border:1px solid #8f8578;padding:15px 25px;margin-top:18px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;transition:.25s}.btn:hover{background:#eee8df;color:#111}
+.sidequote{position:absolute;right:42px;bottom:72px;z-index:2;writing-mode:vertical-rl;text-orientation:mixed;font-size:9px;letter-spacing:.26em;color:#bdb5ab;text-transform:uppercase}
+section{border-bottom:1px solid var(--line)}.section{padding:90px 0}.section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:32px}.kicker{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}h2{font:500 clamp(46px,6vw,78px)/.9 "Cormorant Garamond",serif;margin:6px 0 0}
+.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.card{position:relative;min-height:360px;overflow:hidden;border:1px solid var(--line);background:#111}.card img{width:100%;height:100%;min-height:360px;object-fit:cover;transition:transform .7s;filter:saturate(.65) contrast(1.08)}.card:hover img{transform:scale(1.04)}.card:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.88))}.card-text{position:absolute;z-index:2;left:18px;right:18px;bottom:18px}.card h3{font:500 27px "Cormorant Garamond",serif;margin:0}.card p{font-size:8px;letter-spacing:.2em;color:#c1b9af;text-transform:uppercase;margin:6px 0 14px}.smallbtn{font-size:8px;letter-spacing:.18em;text-transform:uppercase;border:1px solid #777065;padding:9px 12px;display:inline-block}
+.look{display:grid;grid-template-columns:1.15fr .85fr;min-height:650px}.look-photo{min-height:650px}.look-photo img{width:100%;height:100%;object-fit:cover;object-position:center 38%;filter:saturate(.7)}.look-info{padding:75px 60px;display:flex;flex-direction:column;justify-content:center}.look-info h2{font-size:90px}.look-info p{color:var(--muted);line-height:1.7;max-width:430px}.pieces{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:28px}.piece{border-top:1px solid var(--line);padding-top:14px}.piece span{display:block;font-size:9px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase}.piece strong{display:block;font:500 25px "Cormorant Garamond",serif;margin:3px 0 10px}
+.about{display:grid;grid-template-columns:.9fr 1.1fr;min-height:520px}.about-img{min-height:520px}.about-img img{width:100%;height:100%;object-fit:cover;filter:grayscale(.25) contrast(1.05)}.about-copy{padding:80px 70px;display:flex;justify-content:center;flex-direction:column}.about-copy h2{max-width:650px}.about-copy p{color:var(--muted);line-height:1.8;max-width:620px}
+footer{padding:35px 0 55px;display:flex;justify-content:space-between;color:#777;font-size:9px;letter-spacing:.2em;text-transform:uppercase}
+@media(max-width:1000px){.links{gap:12px}.grid{grid-template-columns:repeat(3,1fr)}.look{grid-template-columns:1fr}.look-photo{min-height:500px}.about{grid-template-columns:1fr}.about-img{min-height:420px}}
+@media(max-width:650px){.wrap{padding:0 20px}header{height:68px}.brand{font-size:23px}.tag{display:none}.links{display:none}.hero{min-height:720px}.hero-copy{padding-top:60px}.hero h1{font-size:65px}.sidequote{display:none}.section{padding:65px 0}.grid{grid-template-columns:repeat(2,1fr)}.card,.card img{min-height:270px}.card h3{font-size:23px}.look-info{padding:55px 25px}.look-info h2{font-size:68px}.about-copy{padding:55px 25px}footer{display:block;line-height:2}}
+</style>
 </head>
-
 <body>
+<header><div class="wrap nav">
+  <div><div class="brand">ELIEZER TROMBETA</div><div class="tag">ESTILO É UMA FORMA DE LIBERDADE</div></div>
+  <nav class="links"><a href="#looks">Looks</a><a href="#categorias">Botas</a><a href="#categorias">Calças</a><a href="#categorias">Jaquetas</a><a href="#categorias">Camisas</a><a href="#categorias">Fragrâncias</a><a href="#categorias">Cabelo</a><a href="#sobre">Sobre</a></nav>
+</div></header>
 
-  <div class="container">
+<main>
+<section class="hero">
+  <img src="assets/foto-3.png" alt="Editorial de estilo em preto">
+  <div class="wrap"><div class="hero-copy">
+    <div class="eyebrow">Meu estilo. Minhas escolhas.</div>
+    <h1>MEU ESTILO.<br>MINHAS ESCOLHAS.</h1>
+    <p>Aqui você encontra as peças que eu uso, selecionadas com cuidado. Roupas, botas, fragrâncias e tudo que faz parte do meu estilo.</p>
+    <a class="btn" href="#categorias">Descobrir meu estilo&nbsp; →</a>
+  </div></div>
+  <div class="sidequote">disciplina também é estilo — caminhe com o que te faz vivo</div>
+</section>
 
-    <header>
-      <div class="logo">ELIEZER TROMBETA</div>
-
-      <nav>
-        <a href="#sobre">Sobre</a>
-        <a href="#links">Links</a>
-      </nav>
-    </header>
-
-    <main>
-
-      <section class="hero">
-
-        <div class="profile">
-          SUA FOTO
-        </div>
-
-        <h1>ELIEZER<br>TROMBETA</h1>
-
-        <p class="subtitle">
-          Criador de conteúdo. Ideias, experiências,
-          recomendações e um pouco da minha vida.
-        </p>
-
-        <div class="links" id="links">
-
-          <a class="link" href="#" target="_blank">
-            📸 Instagram
-          </a>
-
-          <a class="link" href="#" target="_blank">
-            🎵 TikTok
-          </a>
-
-          <a class="link" href="#" target="_blank">
-            ▶️ YouTube
-          </a>
-
-          <a class="link" href="#" target="_blank">
-            🛒 Meus produtos favoritos
-          </a>
-
-          <a class="link" href="#" target="_blank">
-            🏷️ Cupons e descontos
-          </a>
-
-          <a class="link" href="#" target="_blank">
-            💼 Parcerias
-          </a>
-
-        </div>
-
-      </section>
-
-      <section class="section" id="sobre">
-
-        <h2>Mais que conteúdo.</h2>
-
-        <p>
-          Bem-vindo ao meu espaço na internet.
-          Aqui você encontra meus conteúdos, projetos,
-          recomendações e algumas das coisas que fazem
-          parte da minha vida.
-        </p>
-
-      </section>
-
-    </main>
-
-    <footer>
-      © 2026 Eliezer Trombeta — eliezertrombeta.com.br
-    </footer>
-
+<section id="categorias" class="section"><div class="wrap">
+  <div class="section-head"><div><div class="kicker">Categorias</div><h2>O QUE EU USO</h2></div><div class="kicker">Estilo na prática</div></div>
+  <div class="grid">
+    <a class="card" href="#"><img src="assets/foto-5.png" alt="Botas"><div class="card-text"><h3>BOTAS</h3><p>Conforto e atitude</p><span class="smallbtn">Ver produtos →</span></div></a>
+    <a class="card" href="#"><img src="assets/foto-6.png" alt="Calças"><div class="card-text"><h3>CALÇAS</h3><p>Caimento perfeito</p><span class="smallbtn">Ver produtos →</span></div></a>
+    <a class="card" href="#"><img src="assets/foto-2.png" alt="Jaquetas"><div class="card-text"><h3>JAQUETAS</h3><p>Peças icônicas</p><span class="smallbtn">Ver produtos →</span></div></a>
+    <a class="card" href="#"><img src="assets/foto-8.png" alt="Camisas"><div class="card-text"><h3>CAMISAS</h3><p>Do básico ao sofisticado</p><span class="smallbtn">Ver produtos →</span></div></a>
+    <a class="card" href="#"><img src="assets/foto-10.png" alt="Fragrâncias"><div class="card-text"><h3>FRAGRÂNCIAS</h3><p>Presença em detalhes</p><span class="smallbtn">Ver produtos →</span></div></a>
+    <a class="card" href="#"><img src="assets/foto-4.png" alt="Cabelo"><div class="card-text"><h3>CABELO</h3><p>Estilo também aqui</p><span class="smallbtn">Ver produtos →</span></div></a>
   </div>
+</div></section>
 
+<section id="looks"><div class="look">
+  <div class="look-photo"><img src="assets/foto-1.png" alt="Look all black"></div>
+  <div class="look-info"><div class="kicker">Meu look 01</div><h2>ALL<br>BLACK.</h2><p>Clássico, atemporal e sempre funciona. As mesmas peças que eu uso, organizadas para você montar o seu.</p>
+    <a class="btn" href="#categorias">Ver o look →</a>
+    <div class="pieces">
+      <div class="piece"><span>Peça 01</span><strong>Bota</strong><a class="smallbtn" href="#">Ver peça →</a></div>
+      <div class="piece"><span>Peça 02</span><strong>Calça</strong><a class="smallbtn" href="#">Ver peça →</a></div>
+      <div class="piece"><span>Peça 03</span><strong>Camisa</strong><a class="smallbtn" href="#">Ver peça →</a></div>
+      <div class="piece"><span>Peça 04</span><strong>Jaqueta</strong><a class="smallbtn" href="#">Ver peça →</a></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="sobre"><div class="about">
+  <div class="about-img"><img src="assets/foto-4.png" alt="Retrato editorial"></div>
+  <div class="about-copy"><div class="kicker">Sobre</div><h2>MAIS QUE ROUPAS.<br>ESCOLHAS.</h2><p>O estilo sempre fez parte da minha história. Aqui eu compartilho as peças que uso e que realmente fazem sentido no meu dia a dia. Não é sobre tendência. É sobre identidade.</p><a class="btn" href="#top">Conheça minha história →</a></div>
+</div></section>
+</main>
+
+<footer><div>ELIEZER TROMBETA</div><div>MMXXVI</div><div>ESCOLHAS MELHORES · TODOS OS DIAS</div></footer>
 </body>
 </html>
